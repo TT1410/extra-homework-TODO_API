@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3rd party apps
+    'rest_framework',
+    # project apps
+    'apps.accounts'
 ]
 
 MIDDLEWARE = [
@@ -76,6 +80,8 @@ WSGI_APPLICATION = 'TODO_API.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+AUTH_USER_MODEL = 'accounts.User'
+
 DATABASES = {
     'default': env.db()
 }
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
